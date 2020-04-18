@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+	<title>Rivers</title>
+</head>
+
+<body>
+	<div class="container">
+		<div id="mapid" style="height: 300px;"></div>
+		<h1>Rivers</h1>
+		<div class="search">
+			<label for="search">Search:</label>
+			<input type="text" id="search" />
+		</div>
+		<div id="rivers">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Continent</th>
+						<th>Length</th>
+						<th>Area</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Flows into</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<button id="add_btn" class="add_btn">+</button>
+	</div>
+
+	<div class="modal hidden" id="modal">
+		<div class="modal_content">
+			<button class="close_btn" id="close_btn">X</button>
+			<form id="add_form">
+				<div class="form_control">
+					<label for="name">Name</label>
+					<input type="text" id="name">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="continent">Continent</label>
+					<input type="text" id="continent">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="length">Length</label>
+					<input type="number" id="length">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="area">Area</label>
+					<input type="number" id="area">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="flow_into">Flow into</label>
+					<input type="text" id="flow_into">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="ltd">Lantitude</label>
+					<input type="number" id="ltd">
+					<small>Error</small>
+				</div>
+				<div class="form_control">
+					<label for="lng">Longitude</label>
+					<input type="number" id="lnd">
+					<small>Error</small>
+				</div>
+				<button>Add</button>
+			</form>
+		</div>
+	</div>
+	<script src="../src/app.js"></script>
+</body>
+
+</html>
